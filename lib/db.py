@@ -6,7 +6,8 @@ db = None
 def get_mongo_client():
     global db
     if db is None:
-        uri = os.environ.get('MONGODB_ATLAS_URI')
+        # uri = os.environ.get('MONGODB_ATLAS_URI')
+        uri = "mongodb+srv://readOnly:readOnly@confluent-go.uvwhr.mongodb.net"
         db = MongoClient(uri)['TaskDB']
     return db
 
